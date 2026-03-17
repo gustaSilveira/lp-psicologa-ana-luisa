@@ -1,65 +1,65 @@
+import { Header } from "../components/Header";
+import { WhatsAppButton } from "../components/WhatsAppButton";
+import { Services } from "../components/Services";
+import { About } from "../components/About";
+import { FAQ } from "../components/FAQ";
+import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
+import { Footer } from "../components/Footer";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    // O fundo bg-sand-50 aqui garante o fundo "off-white" super clarinho base do site
+    <main className="min-h-screen bg-sand-50 font-sans relative pt-20">
+      
+      {/* CABEÇALHO */}
+      <Header />
+
+      {/* 1. SEÇÃO PRINCIPAL (HERO) - Fundo claro base */}
+      <section className="relative w-full max-w-7xl mx-auto px-6 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div className="flex-1 space-y-6 text-center lg:text-left">
+          <span className="text-petrol-600 font-semibold tracking-wider text-sm uppercase">
+            Psicologia Clínica & Neuropsicologia
+          </span>
+          <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-slate-900">
+            Um espaço de acolhimento para o seu desenvolvimento
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Compreendendo o funcionamento da sua mente para promover bem-estar, autonomia e qualidade de vida. Atendimento especializado para jovens e adultos.
           </p>
+          <div className="pt-4 flex justify-center lg:justify-start">
+            <WhatsAppButton />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Círculo da Foto */}
+        <div className="flex-1 flex justify-center w-full">
+          <div className="relative w-72 h-72 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-8 border-sand-100 shadow-2xl">
+            {/* Lembre-se de colocar o nome exato da sua foto ali no src, ex: '/ana.jpg' */}
+            <Image src="/perfil.jpg" alt="Dra. Ana Luisa" fill className="object-cover" priority />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* 2. SEÇÃO DE ESPECIALIDADES (Fundo Bege) */}
+      {/* A mágica acontece aqui: A section com bg-sand-100 vai de ponta a ponta na tela */}
+      <section id="especialidades" className="w-full bg-sand-100 py-16 lg:py-24 border-y border-petrol-100/40 shadow-inner">
+        <Services />
+      </section>
+
+      {/* 3. SEÇÃO SOBRE MIM (Volta para o fundo claro) */}
+      <section id="sobre-mim" className="w-full py-16 lg:py-24">
+        <About />
+      </section>
+
+      {/* 4. SEÇÃO DE DÚVIDAS (Fundo Bege novamente) */}
+      <section id="duvidas" className="w-full bg-sand-100 py-16 lg:py-24 border-t border-petrol-100/40 shadow-inner">
+        <FAQ />
+      </section>
+
+      {/* RODAPÉ E BOTÃO FLUTUANTE */}
+      <Footer />
+      <FloatingWhatsApp />
+    </main>
   );
 }
