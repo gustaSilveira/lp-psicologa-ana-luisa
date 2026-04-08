@@ -27,8 +27,9 @@ export const Services = () => {
   return (
     <div className="max-w-7xl mx-auto px-6">
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">Especialidades</h2>
-        <p className="text-slate-600">Clique nos cards para saber mais sobre cada área</p>
+        {/* Título com a cor azul escuro da paleta */}
+        <h2 className="text-3xl font-bold text-nevoa-dark mb-4">Especialidades</h2>
+        <p className="text-texto">Clique nos cards para saber mais sobre cada área</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -38,16 +39,18 @@ export const Services = () => {
             <div className="relative h-full w-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d] group-active:[transform:rotateY(180deg)] lg:group-hover:[transform:rotateY(180deg)] shadow-md">
               
               {/* LADO DA FRENTE (Símbolo e Título) */}
+              {/* Usamos bg-white para dar contraste com o fundo Areia da seção */}
               <div className="absolute inset-0 h-full w-full rounded-2xl bg-white flex flex-col items-center justify-center p-6 [backface-visibility:hidden]">
-                <div className="text-petrol-600 mb-4">
+                <div className="text-nevoa-dark mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 text-center">{item.title}</h3>
+                <h3 className="text-lg font-bold text-texto text-center">{item.title}</h3>
               </div>
 
               {/* LADO DE TRÁS (Texto explicativo) */}
-              <div className="absolute inset-0 h-full w-full rounded-2xl bg-petrol-600 p-6 text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center">
-                <p className="text-sm text-center leading-relaxed">
+              {/* Aqui usamos o Azul Névoa (bg-nevoa) para destacar bem quando o card vira */}
+              <div className="absolute inset-0 h-full w-full rounded-2xl bg-nevoa p-6 text-white [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center border-2 border-nevoa-light">
+                <p className="text-sm text-center font-medium leading-relaxed">
                   {item.description}
                 </p>
               </div>
