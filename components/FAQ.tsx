@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "Como é feita a avaliação neuropsicológica?",
-    answer: "A avaliação é um processo estruturado que envolve entrevistas clínicas e a aplicação de testes padronizados (memória, atenção, raciocínio, etc.). O processo leva em média de 4 a 8 sessões e resulta na entrega de um laudo detalhado."
+    answer: "A avaliação é um processo estruturado que envolve entrevistas clínicas e a aplicação de testes padronizados. O processo leva a uma extensa avaliaçao conforme as sessões e resulta na entrega de um laudo detalhado."
   }
 ];
 

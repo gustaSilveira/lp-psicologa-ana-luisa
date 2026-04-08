@@ -60,7 +60,7 @@ export function Footer() {
             <div className="bg-petrol-600 p-2 rounded-full group-hover:bg-terracotta-400 transition-colors duration-300">
               <Instagram size={20} />
             </div>
-            <span>@dra.analuisa</span>
+            <span>psi.analuisa</span>
           </a>
         </div>
 

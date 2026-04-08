@@ -4,16 +4,15 @@ export function About() {
   return (
     <section id="sobre" className="py-24 bg-sand-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
-
+        
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
             <div className="absolute inset-0 bg-petrol-700/10 z-10 rounded-3xl mix-blend-overlay"></div>
-            <Image
-              src="/ana_luisa_foto.jpg"
-              alt="Foto da Dra. Ana Luisa"
-              width={500}
-              height={500}
-              className="suas-classes-do-tailwind-aqui"
+            <Image 
+              src="/foto-perfil-v2.jpg"
+              alt="Dra. Ana Luisa no consultório" 
+              fill
+              className="object-cover"
             />
           </div>
         </div>
@@ -23,9 +22,9 @@ export function About() {
             Conheça a Profissional
           </span>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900">
-            Dra. Ana Luisa
+            Psi. Ana Luisa
           </h2>
-
+          
           <div className="space-y-4 text-slate-600 leading-relaxed text-lg">
             <p>
               Sou psicóloga clínica apaixonada por compreender a complexidade da mente humana. Meu objetivo é proporcionar um ambiente ético, seguro e acolhedor para que você possa explorar suas emoções e potenciais.
