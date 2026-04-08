@@ -1,19 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* Tons de Fundo (Bege/Creme) */
-  --color-sand-50: #FCFCF9; /* Fundo principal: um off-white bem quente e acolhedor */
-  --color-sand-100: #F5F5DC; /* O seu Bege exato! Para o cabeçalho e seções alternadas */
+  /* Nossa Paleta Azul Névoa + Areia */
+  --color-nevoa-light: #C4D7E8;
+  --color-nevoa: #9BB8D3;
+  --color-nevoa-dark: #678BAA;
   
-  /* Tons Principais (Azul Sereno) */
-  --color-petrol-100: #E6EEF4; /* Azul super clarinho para detalhes sutis */
-  --color-petrol-600: #6A89A7; /* O seu Azul (#6a89a7) para Botões, ícones e destaques */
-  --color-petrol-700: #4B6680; /* Um azul um pouco mais escuro para o clique do botão */
+  --color-areia-light: #F3EFE9;
+  --color-areia: #DCCCBC;
   
-  /* Tons de Texto (Substituindo o preto por um Azul-Ardósia escuro muito elegante) */
-  --color-slate-600: #5C6F82; /* Parágrafos de leitura suave */
-  --color-slate-800: #3A4B5C; /* Subtítulos */
-  --color-slate-900: #2C3E50; /* Títulos principais */
+  --color-texto: #4A5E72;
 }
 
 body {

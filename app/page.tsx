@@ -9,22 +9,22 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    // O fundo bg-sand-50 aqui garante o fundo "off-white" super clarinho base do site
-    <main className="min-h-screen bg-sand-50 font-sans relative pt-20">
+    // Fundo base do site agora usa o areia claro e o texto com a cor neutra
+    <main className="min-h-screen bg-areia-light text-texto font-sans relative pt-20">
       
       {/* CABEÇALHO */}
       <Header />
 
-      {/* 1. SEÇÃO PRINCIPAL (HERO) - Fundo claro base */}
+      {/* 1. SEÇÃO PRINCIPAL (HERO) */}
       <section className="relative w-full max-w-7xl mx-auto px-6 py-12 lg:py-24 flex flex-col-reverse lg:flex-row items-center gap-12">
         <div className="flex-1 space-y-6 text-center lg:text-left">
-          <span className="text-petrol-600 font-semibold tracking-wider text-sm uppercase">
+          <span className="text-nevoa-dark font-semibold tracking-wider text-sm uppercase">
             Psicologia Clínica & Neuropsicologia
           </span>
-          <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-slate-900">
+          <h1 className="text-4xl lg:text-5xl font-bold leading-tight text-nevoa-dark">
             Um espaço de acolhimento para o seu desenvolvimento
           </h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          <p className="text-lg opacity-90 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             Compreendendo o funcionamento da sua mente para promover bem-estar, autonomia e qualidade de vida. Atendimento especializado para jovens e adultos.
           </p>
           <div className="pt-4 flex justify-center lg:justify-start">
@@ -34,16 +34,15 @@ export default function Home() {
 
         {/* Círculo da Foto */}
         <div className="flex-1 flex justify-center w-full">
-          <div className="relative w-72 h-72 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-8 border-sand-100 shadow-2xl">
-            {/* Lembre-se de colocar o nome exato da sua foto ali no src, ex: '/ana.jpg' */}
-            <Image src="/perfil.jpg" alt="Dra. Ana Luisa" fill className="object-cover" priority />
+          <div className="relative w-72 h-72 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-8 border-areia shadow-2xl">
+            {/* Foto atualizada apontando para a pasta public */}
+            <Image src="/ana_luisa_foto.jpg" alt="Dra. Ana Luisa" fill className="object-cover" priority />
           </div>
         </div>
       </section>
 
-      {/* 2. SEÇÃO DE ESPECIALIDADES (Fundo Bege) */}
-      {/* A mágica acontece aqui: A section com bg-sand-100 vai de ponta a ponta na tela */}
-      <section id="especialidades" className="w-full bg-sand-100 py-16 lg:py-24 border-y border-petrol-100/40 shadow-inner">
+      {/* 2. SEÇÃO DE ESPECIALIDADES (Fundo Areia Base) */}
+      <section id="especialidades" className="w-full bg-areia py-16 lg:py-24 border-y border-nevoa-light/40 shadow-inner">
         <Services />
       </section>
 
@@ -52,8 +51,8 @@ export default function Home() {
         <About />
       </section>
 
-      {/* 4. SEÇÃO DE DÚVIDAS (Fundo Bege novamente) */}
-      <section id="duvidas" className="w-full bg-sand-100 py-16 lg:py-24 border-t border-petrol-100/40 shadow-inner">
+      {/* 4. SEÇÃO DE DÚVIDAS (Fundo Areia Base novamente) */}
+      <section id="duvidas" className="w-full bg-areia py-16 lg:py-24 border-t border-nevoa-light/40 shadow-inner">
         <FAQ />
       </section>
 

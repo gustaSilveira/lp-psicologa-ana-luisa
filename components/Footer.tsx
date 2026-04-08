@@ -44,7 +44,7 @@ export function Footer() {
             className="flex items-center gap-3 text-petrol-100 hover:text-white transition-colors duration-200"
           >
             <Mail size={20} />
-            <span>contato@draanaluisa.com.br</span>
+            <span>psi.analuisanovaes@gmail.com</span>
           </a>
         </div>
 
@@ -52,7 +52,7 @@ export function Footer() {
         <div className="space-y-4">
           <h4 className="text-lg font-semibold mb-4">Me acompanhe</h4>
           <a 
-            href={linkInstagram}
+            href='https://www.instagram.com/psi_analuisamoraes?igsh=c2NwamV1Njc5cmRh'
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-petrol-100 hover:text-white transition-colors duration-200 group"

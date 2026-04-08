@@ -2,13 +2,16 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dra. Ana Luisa | Psicologia Clínica e Neuropsicologia",
-  description: "Um espaço de acolhimento para o seu desenvolvimento. Atendimento especializado em psicoterapia e avaliação neuropsicológica.",
+  title: "PSI ANA LUISA",
+  description: "Um espaço de acolhimento para o seu desenvolvimento. Atendimento especializado em psicoterapia e avaliação.",
+  icons: {
+    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>',
+  },
   openGraph: {
-    title: "Dra. Ana Luisa | Psicologia Clínica",
+    title: "PSI ANA LUISA | Psicologia Clínica",
     description: "Compreendendo o funcionamento da sua mente para promover bem-estar. Agende sua consulta.",
-    url: "https://www.sitedaanaluisa.com.br", 
-    siteName: "Dra. Ana Luisa Psicologia",
+    url: "https://www.sitedaanaluisa.com.br",
+    siteName: "PSI ANA LUISA",
     locale: "pt_BR",
     type: "website",
   },
