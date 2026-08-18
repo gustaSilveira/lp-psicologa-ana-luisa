@@ -19,6 +19,10 @@
    ANIMAÇÃO DA MOEDA
 ========================= */
 
+/* =========================
+   ANIMAÇÃO DA MOEDA 3D
+========================= */
+
 @keyframes coinFlip {
   0% {
     transform: rotateY(0deg);
@@ -40,12 +44,11 @@
 .coin-flip {
   animation: coinFlip 10s ease-in-out infinite;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
-
-/* =========================
-   FACES DA MOEDA
-========================= */
 
 .coin-face {
   position: absolute;
@@ -53,15 +56,15 @@
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
-
-/* Verso da moeda */
 
 .coin-back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 /* =========================
